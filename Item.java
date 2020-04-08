@@ -53,3 +53,24 @@ class Item {
 		//TODO
 	}
 }
+class  Receipt extends Item{
+	List<Item> artikli=new ArrayList();
+	double Sum(List<Item> lista)
+	{
+		int sum=0;
+		for(int i=0;i<lista.size();i++)
+		{
+			sum=sum+lista[i].getPrice();
+		}
+		return sum;
+	}
+	double VkupenDanok(List<Item> lista)
+	{
+		int danok=0;
+		for(int i=0;i<lista.size();i++)
+		{
+			danok=danok+lista[i].getPrice();
+		}
+		return danok;
+	}
+}
